@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dish Added Successfully</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .message {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: white;
+            color: #4CAF50;
+            font-size: 25px;
+        }
+
+        .options {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .option {
+            margin-right: 20px;
+        }
+
+        .option a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 8px 16px;
+            background-color: #4CAF50;
+            border: 1px solid black;
+            border-radius: 4px;
+        }
+
+        .option a:hover {
+            background-color: #333333;
+            border-color: #333333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="message">
+            <p>The dish has been added successfully!</p>
+        </div>
+        <div class="options">
+            <div class="option">
+                <a href="{{ url_for('add_dish') }}">Add Another Dish</a>
+            </div>
+            <div class="option">
+                <a href="{{ url_for('display_dishes') }}">Display Dishes</a>
+            </div>
+            <div class="option">
+                <a href="{{ url_for('remove_dish') }}">Remove Dish</a>
+            </div>
+            <div class="option">
+                <a href="{{ url_for('update_dish') }}">Update Dish</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

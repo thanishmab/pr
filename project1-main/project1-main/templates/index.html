@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Restaurant Management System</title>
+    <style>
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .menu {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+        }
+
+        li {
+            margin-bottom: 10px;
+            margin-right: 10px;
+        }
+
+        .menu-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50; /* Green */
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .menu-button:hover {
+            background-color: #45A049; /* Darker green */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Restaurant Management System</h1>
+        <div class="menu">
+            <h2></h2> 
+            <ul>
+                <li><a class="menu-button" href="{{ url_for('add_dish') }}">Add Dish</a></li>
+                <li><a class="menu-button" href="{{ url_for('update_dish') }}">Update Dish</a></li>
+                <li><a class="menu-button" href="{{ url_for('remove_dish') }}">Remove Dish</a></li>
+                <li><a class="menu-button" href="{{ url_for('display_dishes') }}">Display Dishes</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
